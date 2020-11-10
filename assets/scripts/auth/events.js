@@ -59,6 +59,15 @@ const onShowNote = function (event) {
     .then(ui.onShowNoteSuccess)
     .catch(ui.onShowNoteFailure)
 }
+const onUpdateNote = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+  api.updateNote(formData)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onUpdateFailure)
+}
 const onDeleteNote = function (event) {
   event.preventDefault()
 
@@ -99,6 +108,7 @@ module.exports = {
   onChangePassword,
   onSignOut,
   onPostNote,
+  onUpdateNote,
   onShowNote,
   onDeleteNote,
   onIndexNotes,

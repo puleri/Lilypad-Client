@@ -53,8 +53,15 @@ const onPostNoteSuccess = function () {
 const onPostNoteFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
+const onUpdateSuccess = function () {
+  $('#note-display').text('The note has been updated. Check it out!')
+  $('form').trigger('reset')
+}
+const onUpdateFailure = function (error) {
+  $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
+}
 const onShowNoteSuccess = function (res) {
-  console.log('res is ', res)
+  // console.log('res is ', res)
   const note = res.note
   $('#note-display').html('')
 
@@ -68,7 +75,7 @@ const onShowNoteSuccess = function (res) {
   $('#show-note').trigger('reset')
 }
 const onShowNoteFailure = function (error) {
-  console.log('Show note error!')
+  // console.log('Show note error!')
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
 const onDeleteNoteSuccess = function () {
@@ -76,7 +83,7 @@ const onDeleteNoteSuccess = function () {
   $('#delete-note').trigger('reset')
 }
 const onIndexNotesSuccess = function (res) {
-  console.log('response is ', res)
+  // console.log('response is ', res)
   const notes = res.notes
 
   $('#note-display').html('')
@@ -105,5 +112,7 @@ module.exports = {
   onShowNoteSuccess,
   onShowNoteFailure,
   onDeleteNoteSuccess,
-  onIndexNotesSuccess
+  onIndexNotesSuccess,
+  onUpdateSuccess,
+  onUpdateFailure
 }

@@ -46,13 +46,22 @@ const postNote = function (data) {
   })
 }
 const showNote = function (formData) {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/notes/' + formData.note.id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
     method: 'GET'
+  })
+}
+const updateNote = function (formData) {
+  return $.ajax({
+    url: config.apiUrl + '/notes/' + formData.note.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: formData
   })
 }
 const deleteNote = function (formData) {
@@ -81,5 +90,6 @@ module.exports = {
   postNote,
   showNote,
   deleteNote,
-  indexNotes
+  indexNotes,
+  updateNote
 }
