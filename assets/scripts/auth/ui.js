@@ -5,6 +5,10 @@ const store = require('./../store')
 const onSignUpSuccess = function (response) {
   $('#message').text('Thanks for signing up ' + response.user.email)
   $('#sign-up').trigger('reset')
+  $('#sign-in').css('display', 'block')
+  $('#sign-up').css('display', 'none')
+  $('#has-account').css('display', 'none')
+  $('#no-account').css('display', 'block')
 }
 const onSignUpFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
@@ -12,6 +16,10 @@ const onSignUpFailure = function (error) {
 const onSignInSuccess = function (response) {
   $('#message').text('You are now signed in ' + response.user.email)
   $('#sign-in').trigger('reset')
+  $('#notes-div').css('display', 'block')
+  $('#sign-in').css('display', 'none')
+  $('#sign-out').css('display', 'block')
+  $('#no-account').css('display', 'none')
   store.user = response.user
 }
 const onSignInFailure = function (error) {
@@ -63,7 +71,7 @@ const onIndexNotesSuccess = function (res) {
     <h4>Title: ${currentNote.title}</h4>
     <p>Body: ${currentNote.body}</p>
     <p>Owner: ${currentNote.owner.email}</p>
-    <p>ID: ${currentNote.owner._id}
+    <p>ID: ${currentNote._id}
     <br>
     `)
     $('#note-display').append(noteHTML)

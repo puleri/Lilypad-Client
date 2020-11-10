@@ -46,7 +46,7 @@ const postNote = function (data) {
   })
 }
 const showNote = function (formData) {
-  console.log(formData)
+  // console.log(formData.note)
   return $.ajax({
     url: config.apiUrl + '/notes/' + formData.note.id,
     headers: {

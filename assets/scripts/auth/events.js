@@ -66,6 +66,22 @@ const onIndexNotes = function (event) {
     .then(ui.onIndexNotesSuccess)
     .catch(ui.onIndexNotesError)
 }
+const showSignIn = function (event) {
+  $('#sign-in').css('display', 'block')
+  $('#sign-up').css('display', 'none')
+  $('h4').css('display', 'none')
+  $('#has-account').css('display', 'none')
+  $('#no-account').css('display', 'block')
+  $('#message').text('')
+}
+const showSignUp = function (event) {
+  $('#sign-in').css('display', 'none')
+  $('#sign-up').css('display', 'block')
+  $('h4').css('display', 'block')
+  $('#has-account').css('display', 'block')
+  $('#no-account').css('display', 'none')
+  $('#message').text('')
+}
 
 module.exports = {
   onSignUp,
@@ -74,5 +90,7 @@ module.exports = {
   onSignOut,
   onPostNote,
   onShowNote,
-  onIndexNotes
+  onIndexNotes,
+  showSignIn,
+  showSignUp
 }

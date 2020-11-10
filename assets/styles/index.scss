@@ -3,3 +3,39 @@
 body {
   background-color: pink;
 }
+
+#has-account {
+  margin-top: 75px;
+  border: none;
+  background-color: pink;
+}
+
+#has-account:hover {
+  text-decoration: underline;
+}
+
+#no-account {
+  display: none;
+  border: none;
+  background-color: pink;
+}
+
+#no-account:hover {
+  text-decoration: underline;
+}
+
+#change-password {
+  display: none;
+}
+
+#sign-in {
+  display: none;
+}
+
+#sign-out {
+  display: none;
+}
+
+#notes-div {
+  display: none;
+}
