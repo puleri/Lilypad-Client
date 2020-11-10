@@ -41,10 +41,38 @@ const onSignOut = function (data) {
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }
+const onPostNote = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.postNote(data)
+    .then(ui.onPostNoteSuccess)
+    .catch(ui.onPostNoteFailure)
+}
+const onShowNote = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+  api.showNote(formData)
+    .then(ui.onShowNoteSuccess)
+    .catch(ui.onShowNoteFailure)
+}
+const onIndexNotes = function (event) {
+  event.preventDefault()
+
+  api.indexNotes()
+    .then(ui.onIndexNotesSuccess)
+    .catch(ui.onIndexNotesError)
+}
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onPostNote,
+  onShowNote,
+  onIndexNotes
 }

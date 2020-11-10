@@ -35,9 +35,41 @@ const signOut = function () {
     }
   })
 }
+const postNote = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/notes',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+const showNote = function (formData) {
+  console.log(formData)
+  return $.ajax({
+    url: config.apiUrl + '/notes/' + formData.note.id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'GET'
+  })
+}
+const indexNotes = function () {
+  return $.ajax({
+    url: config.apiUrl + '/notes',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'GET'
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  postNote,
+  showNote,
+  indexNotes
 }

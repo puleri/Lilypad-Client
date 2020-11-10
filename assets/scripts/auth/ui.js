@@ -31,6 +31,44 @@ const onSignOutSuccess = function () {
 const onSignOutFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
+const onPostNoteSuccess = function () {
+  $('#message').text('Created new note!')
+}
+const onPostNoteFailure = function (error) {
+  $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
+}
+const onShowNoteSuccess = function (res) {
+  const note = res.note
+  $('#note-display').html('')
+
+  const noteHTML = (`
+    <h4>Title: ${note.title}</h4>
+    <p>Body: ${note.body}</p>
+    <br>
+  `)
+
+  $('#note-display').html(noteHTML)
+  $('#show-note').trigger('reset')
+}
+const onShowNoteFailure = function (error) {
+  $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
+}
+const onIndexNotesSuccess = function (res) {
+  console.log('response is ', res)
+  const notes = res.notes
+
+  $('#note-display').html('')
+  notes.forEach(function (currentNote) {
+    const noteHTML = (`
+    <h4>Title: ${currentNote.title}</h4>
+    <p>Body: ${currentNote.body}</p>
+    <p>Owner: ${currentNote.owner.email}</p>
+    <p>ID: ${currentNote.owner._id}
+    <br>
+    `)
+    $('#note-display').append(noteHTML)
+  })
+}
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -39,5 +77,10 @@ module.exports = {
   onChangePasswordSuccess,
   onChangePasswordFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onPostNoteSuccess,
+  onPostNoteFailure,
+  onShowNoteSuccess,
+  onShowNoteFailure,
+  onIndexNotesSuccess
 }

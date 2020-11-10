@@ -12,4 +12,7 @@ $(() => {
   $('#sign-in').on('submit', events.onSignIn)
   $('#change-password').on('submit', events.onChangePassword)
   $('#sign-out').on('submit', events.onSignOut)
+  $('#post-note').on('submit', events.onPostNote)
+  $('#show-note').on('submit', events.onShowNote)
+  $('#index-notes').on('submit', events.onIndexNotes)
 })
