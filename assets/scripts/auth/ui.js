@@ -20,6 +20,7 @@ const onSignInSuccess = function (response) {
   $('#sign-in').css('display', 'none')
   $('#sign-out').css('display', 'block')
   $('#no-account').css('display', 'none')
+  $('.show-change-password').css('display', 'block')
   store.user = response.user
 }
 const onSignInFailure = function (error) {
@@ -35,17 +36,25 @@ const onChangePasswordFailure = function (error) {
 }
 const onSignOutSuccess = function () {
   $('#message').text('You are now signed out!')
+  $('.show-change-password').css('display', 'none')
+  $('#sign-in').css('display', 'block')
+  $('#no-account').css('display', 'block')
+  $('#sign-out').css('display', 'none')
+  $('#notes-div').css('display', 'none')
+  $('#note-display').text('')
 }
 const onSignOutFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
 const onPostNoteSuccess = function () {
   $('#message').text('Created new note!')
+  $('#post-note').trigger('reset')
 }
 const onPostNoteFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
 const onShowNoteSuccess = function (res) {
+  console.log('res is ', res)
   const note = res.note
   $('#note-display').html('')
 
@@ -59,7 +68,12 @@ const onShowNoteSuccess = function (res) {
   $('#show-note').trigger('reset')
 }
 const onShowNoteFailure = function (error) {
+  console.log('Show note error!')
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
+}
+const onDeleteNoteSuccess = function () {
+  $('#message').text('Note deleted!')
+  $('#delete-note').trigger('reset')
 }
 const onIndexNotesSuccess = function (res) {
   console.log('response is ', res)
@@ -90,5 +104,6 @@ module.exports = {
   onPostNoteFailure,
   onShowNoteSuccess,
   onShowNoteFailure,
+  onDeleteNoteSuccess,
   onIndexNotesSuccess
 }

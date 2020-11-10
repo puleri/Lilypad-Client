@@ -15,6 +15,7 @@ $(() => {
   $('#post-note').on('submit', events.onPostNote)
   $('#show-note').on('submit', events.onShowNote)
   $('#index-notes').on('submit', events.onIndexNotes)
+  $('#delete-note').on('submit', events.onDeleteNote)
   $('#has-account').on('click', events.showSignIn)
   $('#no-account').on('click', events.showSignUp)
 })
