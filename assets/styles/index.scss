@@ -1,7 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: pink;
   margin: 0;
   padding: 0;
 }
@@ -13,7 +12,7 @@ body {
 
 #sign-out-button {
   border: none;
-  background-color: #ff5552;
+  background-color: #EF5757;
   margin-left: 70%;
   margin-top: -50px;
   text-align: right;
@@ -26,7 +25,6 @@ body {
 #has-account {
   margin-top: 75px;
   border: none;
-  background-color: pink;
 }
 
 #has-account:hover {
@@ -36,7 +34,6 @@ body {
 #no-account {
   display: none;
   border: none;
-  background-color: pink;
 }
 
 #no-account:hover {
@@ -68,7 +65,7 @@ body {
   margin: 0;
   padding: 0;
   margin-top: -21px;
-  background-color: #ff5552;
+  background-color: #EF5757;
   height: 90px;
 }
 
@@ -94,7 +91,6 @@ p {
 #message {
   display: flex;
   position: relative;
-  background-color: pink;
   margin-top: 2px;
   width: 100%;
   border: none;
@@ -115,14 +111,13 @@ h4 {
   align-items: center;
   border-radius: 5px;
   margin: 5px;
-  background-color: pink;
-  border: 1px solid white;
+  border: 1px solid #DDAAB7;
   color: black;
   justify-content: center;
 }
 
 .footer {
-  background-color: #c93e34;
+  background-color: #DDAAB7;
   width: 100%;
   height: 80px;
 }
