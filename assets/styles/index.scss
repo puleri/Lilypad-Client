@@ -2,6 +2,25 @@
 
 body {
   background-color: pink;
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar {
+  height: 90px;
+  margin-top: -70px;
+}
+
+#sign-out-button {
+  border: none;
+  background-color: #ff5552;
+  margin-left: 70%;
+  margin-top: -50px;
+  text-align: right;
+}
+
+#sign-out-button:hover {
+  background-color: #ff7573;
 }
 
 #has-account {
@@ -38,4 +57,50 @@ body {
 
 #notes-div {
   display: none;
+}
+
+.h1container {
+  margin: 0;
+  padding: 0;
+  margin-top: -21px;
+  background-color: #ff5552;
+  height: 90px;
+}
+
+h1 {
+  margin: auto;
+  top: 20px;
+  position: relative;
+}
+
+h5 {
+  margin-top: -5px;
+}
+
+p {
+  // background-color: white;
+  margin-top: -50px;
+  width: 100%;
+  // border: 1px solid black;
+  margin-left: 20px;
+}
+
+#message {
+  display: flex;
+  position: relative;
+  background-color: pink;
+  margin-top: 2px;
+  width: 100%;
+  border: none;
+  margin-left: 10px;
+}
+
+h4 {
+  // background-color: white;
+  margin-top: -50px;
+  width: 100%;
+  // border: 1px solid black;
+  border-bottom: none;
+  margin-left: 20px;
+  text-align: center;
 }

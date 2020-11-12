@@ -41,7 +41,11 @@ const onSignOutSuccess = function () {
   $('#no-account').css('display', 'block')
   $('#sign-out').css('display', 'none')
   $('#notes-div').css('display', 'none')
-  $('#note-display').text('')
+  $('#update-note').trigger('reset')
+  $('#show-note').trigger('reset')
+  $('#post-note').trigger('reset')
+  $('#delete-note').trigger('reset')
+  $('#change-password').trigger('reset')
 }
 const onSignOutFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
@@ -66,8 +70,8 @@ const onShowNoteSuccess = function (res) {
   $('#note-display').html('')
 
   const noteHTML = (`
-    <h4>Title: ${note.title}</h4>
-    <p>Body: ${note.body}</p>
+    <h4>${note.title}</h4>
+    <p class="notes-table">${note.body}</p>
     <br>
   `)
 
@@ -89,8 +93,8 @@ const onIndexNotesSuccess = function (res) {
   $('#note-display').html('')
   notes.forEach(function (currentNote) {
     const noteHTML = (`
-    <h4>Title: ${currentNote.title}</h4>
-    <p>Body: ${currentNote.body}</p>
+    <h4>${currentNote.title}</h4>
+    <p>${currentNote.body}</p>
     <p>Owner: ${currentNote.owner.email}</p>
     <p>ID: ${currentNote._id}
     <br>

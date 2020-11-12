@@ -13,73 +13,79 @@
     </head>
     <body>
       <pre>
-        <h1>Lilypad</h1>
-        <p id="message"></p>
-        <form id="sign-up">
-          <h3>Sign Up</h3>
-          <label for="email">Email</label>
-          <input id="email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
+        <div class="container">
+          <div class="top-bar">
+            <div class="h1container"><h1>Lilypad</h1></div>
+            <form id="sign-out">
+                <button id="sign-out-button" type="submit">S i g n   O u t </button>
+            </form>
+          </div>
+          <p id="message"></p>
+          <div class="row">
+            <form class="col-12" id="sign-up">
+              <h3>Sign Up</h3>
+              <label for="email">Email</label>
+              <input id="email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
 
-          <label for="password">Password</label>
-          <input id="password" placeholder="password" name="credentials[password]" type="password">
+              <label for="password">Password</label>
+              <input id="password" placeholder="password" name="credentials[password]" type="password">
 
-          <label for="password_confirmation">Confirm Password</label>
-          <input id="password_confirmation" placeholder="confirm password" name="credentials[password_confirmation]" type="password">
-          <br>
-          <button type="submit">s u b m i t</button>
-        </form>
-        <form id="sign-in">
-          <h3>Sign In</h3>
-          <label for="email">Email</label>
-          <input id="sign-in-email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
+              <label for="password_confirmation">Confirm Password</label>
+              <input id="password_confirmation" placeholder="confirm password" name="credentials[password_confirmation]" type="password">
+              <br>
+              <button type="submit">s u b m i t</button>
+            </form>
+            <form class="col-12" id="sign-in">
+              <h3>Sign In</h3>
+              <label for="email">Email</label>
+              <input id="sign-in-email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
 
-          <label for="password">Password</label>
-          <input id="sign-in-password" placeholder="password" name="credentials[password]" type="password">
-          <button type="submit">s u b m i t</button>
-        </form>
-        <button id="has-account">Already have an account? Click here to sign in!</button>
-        <button id="no-account">No account? Click here to sign up!</button>
-      <div class="show-change-password">
-        <form id="change-password">
-          <label for="old-password">Old password:</label>
-          <input id="old-password" type="password" placeholder="old password" name="passwords[old]">
-          <label for="new-password">New password:</label>
-          <input id="new-password" type="password" placeholder="new password" name="passwords[new]">
-          <button type="submit">s u b m i t</button>
-        </form>
+              <label for="password">Password</label>
+              <input id="sign-in-password" placeholder="password" name="credentials[password]" type="password">
+              <button type="submit">s u b m i t</button>
+            </form>
+            <button id="has-account">Already have an account? Click here to sign in!</button>
+            <button id="no-account">No account? Click here to sign up!</button>
+          <div class="show-change-password">
+            <form class="col-6" id="change-password">
+              <label for="old-password">Old password:</label>
+              <input id="old-password" type="password" placeholder="old password" name="passwords[old]">
+              <label for="new-password">New password:</label>
+              <input id="new-password" type="password" placeholder="new password" name="passwords[new]">
+              <button type="submit">s u b m i t</button>
+            </form>
+          </div>
+          <div id="notes-div">
+            <form class="col-4" id="post-note">
+              <h3>New Note</h3>
+              <input id="post-note-title" type="text" placeholder="title" name="note[title]">
+              <input id="post-note-body" type="text" placeholder="body" name="note[body]">
+              <button type="submit">s u b m i t</button>
+            </form>
+            <form class="col-4" id="update-note">
+              <h3>Update Note</h3>
+              <input required type="text" name="note[id]" placeholder="note id">
+              <input id="update-note-title" type="text" placeholder="title" name="note[title]">
+              <input id="update-note-body" type="text" placeholder="body" name="note[body]">
+              <button type="submit">s u b m i t</button>
+            </form>
+            <form class="col-4" id="show-note">
+              <h5>Find note</h5>
+              <input required type="text" placeholder="note id" name="note[id]">
+              <button type="submit">s u b m i t</button>
+            </form>
+            <form class="col-4" id="delete-note">
+              <h5>Delete note</h5>
+              <input required type="text" placeholder="note id" name="note[id]">
+              <button type="submit">s u b m i t</button>
+            </form>
+            <form class="col-4" id="index-notes">
+            <button type="submit">Get all notes</button>
+            </form>
+            <div class="col-4" id="note-display"></div>
+        </div>
+        </div>
+        </pre>
       </div>
-      <form id="sign-out">
-        <button type="submit">S i g n   O u t </button>
-      </form>
-      <div id="notes-div">
-        <form id="post-note">
-          <h3>New Note</h3>
-          <input id="post-note-title" type="text" placeholder="title" name="note[title]">
-          <input id="post-note-body" type="text" placeholder="body" name="note[body]">
-          <button type="submit">s u b m i t</button>
-        </form>
-        <form id="update-note">
-          <h3>Update Note</h3>
-          <input required type="text" name="note[id]" placeholder="note id">
-          <input id="update-note-title" type="text" placeholder="title" name="note[title]">
-          <input id="update-note-body" type="text" placeholder="body" name="note[body]">
-          <button type="submit">s u b m i t</button>
-        </form>
-        <form id="show-note">
-          <h5>Find note</h5>
-          <input required type="text" placeholder="note id" name="note[id]">
-          <button type="submit">s u b m i t</button>
-        </form>
-        <form id="delete-note">
-          <h5>Delete note</h5>
-          <input required type="text" placeholder="note id" name="note[id]">
-          <button type="submit">s u b m i t</button>
-        </form>
-        <form id="index-notes">
-        <button type="submit">Get all notes</button>
-        </form>
-        <div id="note-display"></div>
-      </div>
-    </pre>
     </body>
 </html>
