@@ -70,7 +70,7 @@ const onShowNoteSuccess = function (res) {
   $('#note-display').html('')
 
   const noteHTML = (`
-    <h4>${note.title}</h4>
+    <h6>${note.title}</h6>
     <p class="notes-table">${note.body}</p>
     <br>
   `)
@@ -93,7 +93,7 @@ const onIndexNotesSuccess = function (res) {
   $('#note-display').html('')
   notes.forEach(function (currentNote) {
     const noteHTML = (`
-    <h4>${currentNote.title}</h4>
+    <h6>${currentNote.title}</h6>
     <p>${currentNote.body}</p>
     <p>Owner: ${currentNote.owner.email}</p>
     <p>ID: ${currentNote._id}

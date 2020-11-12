@@ -51,6 +51,11 @@ body {
   display: none;
 }
 
+#change-password {
+  align-items: margin-left;
+  text-align: left;
+}
+
 #sign-out {
   display: none;
 }
@@ -75,6 +80,7 @@ h1 {
 
 h5 {
   margin-top: -5px;
+  text-align: center;
 }
 
 p {
@@ -103,4 +109,29 @@ h4 {
   border-bottom: none;
   margin-left: 20px;
   text-align: center;
+}
+
+.box {
+  align-items: center;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: pink;
+  border: 1px solid white;
+  color: black;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #c93e34;
+  width: 100%;
+  height: 80px;
+}
+
+#footer-line {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.indiv-note {
+  margin-top: -45px;
 }
