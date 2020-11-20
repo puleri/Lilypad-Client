@@ -21,9 +21,9 @@ In future iterations of the client, I would like users to be able to view notes 
 to be able to edit notes by clicking on them rather than entering in a seperate box + note Id.
 
 ## Wireframes
-<https://imgur.com/a/ckpB6N5>
-<https://imgur.com/a/OzYnVTx>
-<https://imgur.com/a/3mDt4yI>
+<https://imgur.com/a/ckpB6N5>,
+<https://imgur.com/a/OzYnVTx>,
+<https://imgur.com/a/3mDt4yI>,
 <https://imgur.com/a/DGyBy2w>
 
 ## User Stories
