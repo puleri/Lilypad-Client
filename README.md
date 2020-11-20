@@ -18,7 +18,8 @@ of show/hide functionality-- allowing users to see more relevant information on 
 
 ## Future development
 In future iterations of the client, I would like users to be able to view notes index upon log-in and
-to be able to edit notes by clicking on them rather than entering in a seperate box + note Id.
+to be able to edit notes by clicking on them rather than entering in a seperate box + note Id. Currently users
+are required to input their id's which is tedious.
 
 ## Wireframes
 <https://imgur.com/a/ckpB6N5>,
