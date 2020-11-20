@@ -15,6 +15,8 @@ flowing smoothly. Token authentication was created in the first phase of the pro
 the notes resource. At this point with a minimum viable project came testing and fixing
 functionality of user-resource (notes) security. Finally came some basic styling and addition
 of show/hide functionality-- allowing users to see more relevant information on the screen.
+When creating the front end I A-B'd some example code I had created before, but ultimately 
+hit a stride that amounted to a faster development process than previous projects.
 
 ## Future development
 In future iterations of the client, I would like users to be able to view notes index upon log-in and
