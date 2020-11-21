@@ -21,7 +21,8 @@ hit a stride that amounted to a faster development process than previous project
 ## Future development
 In future iterations of the client, I would like users to be able to view notes index upon log-in and
 to be able to edit notes by clicking on them rather than entering in a seperate box + note Id. Currently users
-are required to input their id's which is tedious.
+are required to input their id's which is tedious. Also I would like to create a way for users to reset
+their passwords-- that way you dont ever need to lose your notes.
 
 ## Wireframes
 <https://imgur.com/a/ckpB6N5>,
