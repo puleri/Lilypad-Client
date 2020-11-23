@@ -1,20 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 
+.container {
+  width: auto;
+}
+
 body {
-  margin: 0;
+  margin-bottom: 0;
   padding: 0;
 }
 
 .top-bar {
   height: 90px;
-  margin-top: -70px;
+  margin-top: -90px;
 }
 
 #sign-out-button {
   border: none;
   background-color: #EF5757;
-  margin-left: 70%;
-  margin-top: -50px;
+  // margin-left: 70%;
   text-align: right;
 }
 
@@ -23,8 +26,13 @@ body {
 }
 
 #has-account {
-  margin-top: 75px;
   border: none;
+  margin-top: -80px;
+  margin-right: -40px;
+  background-color: transparent;
+  position: absolute;
+  color: #EF5757;
+  font-size: 10px;
 }
 
 #has-account:hover {
@@ -34,51 +42,91 @@ body {
 #no-account {
   display: none;
   border: none;
+  background-color: transparent;
+  margin-bottom: 155px;
+  margin-right: -40px;
+  color: #EF5757;
+  font-size: 10px;
 }
 
 #no-account:hover {
   text-decoration: underline;
 }
 
-.show-change-password {
+#show-change-password {
   display: none;
+  border: none;
+  background-color: #EF5757;
+  margin-left: 68%;
+  margin-top: -30px;
+  text-align: right;
+  position: absolute;
+  z-index: 1;
+  font-size: 10px;
+}
+
+#show-change-password:hover {
+  background-color: #ff7573;
 }
 
 #sign-in {
   display: none;
-  margin-bottom: 40px;
+  margin-top: -190px;
+  margin-left: -100px;
+}
+
+#sign-up {
+  display: block;
+  margin-top: -130px;
+  margin-left: -100px;
+}
+
+.auth-header {
+  padding-left: 80px;
 }
 
 #change-password {
+  display: none;
+  margin-left: 52%;
+  margin-top: 73px;
   align-items: margin-left;
   text-align: left;
 }
 
 #sign-out {
   display: none;
+  position: absolute;
+  margin-left: 66%;
+  font-size: 10px;
 }
 
 #notes-div {
   display: none;
+  margin-top: -240px;
+  margin-left: -50px;
 }
 
 .h1container {
+  position: absolute;
   margin: 0;
+  margin-left: -30%;
+  margin-right: -30%;
   padding: 0;
   margin-top: -21px;
   background-color: #EF5757;
   height: 90px;
+  width: 140%;
 }
 
 h1 {
   margin: auto;
+  text-align: center;
   top: 20px;
   position: relative;
 }
 
 h5 {
   margin-top: -5px;
-  text-align: center;
 }
 
 p {
@@ -109,9 +157,10 @@ h4 {
 }
 
 .box {
+  background-color: #FFF7F7;
   align-items: center;
   border-radius: 5px;
-  margin: 5px;
+  margin: 0 5px;
   border: 1px solid #DDAAB7;
   color: black;
   justify-content: center;
@@ -121,13 +170,65 @@ h4 {
   background-color: #DDAAB7;
   width: 100%;
   height: 80px;
+  position: absolute;
 }
 
 #footer-line {
-  padding-top: 50px;
+  padding-top: 75px;
   text-align: center;
 }
 
 .indiv-note {
   margin-top: -45px;
+}
+
+.empty {
+  align-items: center;
+  border-radius: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  color: white;
+}
+
+.submit {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.input-style {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.goals {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 50px;
+}
+
+#goals-h5 {
+  margin-top: 5px;
+}
+
+#goals-p {
+  font-size: 12px;
+  text-align: left;
+  margin-left: 80px;
+}
+
+.goals {
+  display: block;
+}
+
+#username-header {
+  margin-top: -80px;
+  position: absolute;
+}
+
+#post-note-submit {
+  position: absolute;
 }

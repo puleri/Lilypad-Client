@@ -19,4 +19,5 @@ $(() => {
   $('#delete-note').on('submit', events.onDeleteNote)
   $('#has-account').on('click', events.showSignIn)
   $('#no-account').on('click', events.showSignUp)
+  $('#show-change-password').on('click', events.showChangePassword)
 })

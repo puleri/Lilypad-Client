@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Lilypad</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,92 +12,115 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <!-- <img alt="Lilypad-Icon" src="https://imgur.com/a/uyvQBYr"/> -->
       <pre>
         <div class="container">
           <div class="top-bar">
-            <div class="h1container"><h1>Lilypad</h1></div>
+            <div class="h1container"><h1> Lilypad</h1></div>
             <form id="sign-out">
-                <button id="sign-out-button" type="submit">S i g n   O u t </button>
+                <button id="sign-out-button" type="submit">S i g n   O u t</button>
             </form>
+                <button id="show-change-password">C h a n g e   P a s s w o r d</button>
+          <div class="row">
+                <form class="col-6 box" id="change-password">
+                  <h5>Change password</h5>
+                  <label for="old-password">Old password:</label>
+                  <input class="input-style" id="old-password" type="password" placeholder="old password" name="passwords[old]"><br>
+                  <label for="new-password">New password:</label>
+                  <input class="input-style" id="new-password" type="password" placeholder="new password" name="passwords[new]"><br>
+                  <button type="submit">s u b m i t</button>
+                </form>
+                <div class="col-6 box goals">
+                <h5 id="goals-h5">Goals for Lilypad</h5>
+                  <p id="goals-p">
+  Lilypad is built and maintained by one developer
+independent of any company. Some goals for the
+application include making it a fully fleshed out
+note-taking application comparable to some of the
+most popular note-taking applications currently out
+there. In its infancy, feature updates for Lilypad
+coming soon will include the ability to reset a
+forgotten password, an immediate index of notes upon
+log-in, and an overall smoother notes interface.
+Things Lilypad would love to integrate in future
+iterations would include a 'Category' selector with
+types such as 'Grocery' or a 'Music Playlist' both of
+which would make queries based on your location to find
+a grocery store near you, or when a band will preform
+next via ticketmaster. For now, please feel free to
+give feedback on the issues feed for the <a href="https://github.com/puleri/Lilypad-Client">github repo.</a>
+Happy note taking!</p>
+                </div>
           </div>
+          </div>
+          <h3 id="username-header"></h3>
           <p id="message"></p>
           <div class="row">
-            <form class="col-12" id="sign-up">
-              <h3>Sign Up</h3>
+            <div class=col-6>
+            <form id="sign-up">
+              <h3 class="auth-header">Sign Up</h3>
               <label for="email">Email</label>
-              <input id="email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
+              <input class="input-style" id="email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
 
               <label for="password">Password</label>
-              <input id="password" placeholder="password" name="credentials[password]" type="password">
+              <input class="input-style" id="password" placeholder="password" name="credentials[password]" type="password">
 
               <label for="password_confirmation">Confirm Password</label>
-              <input id="password_confirmation" placeholder="confirm password" name="credentials[password_confirmation]" type="password">
+              <input class="input-style" id="password_confirmation" placeholder="confirm password" name="credentials[password_confirmation]" type="password">
               <br>
-              <button type="submit">s u b m i t</button>
+              <button class="submit" type="submit">s u b m i t</button>
             </form>
-            <form class="col-12" id="sign-in">
-              <h3>Sign In</h3>
-              <label for="email">Email</label>
-              <input id="sign-in-email" placeholder="note@lilypad.com" name="credentials[email]" type="email">
-
-              <label for="password">Password</label>
-              <input id="sign-in-password" placeholder="password" name="credentials[password]" type="password">
-              <button type="submit">s u b m i t</button>
-            </form>
-            <button id="has-account">Already have an account? Click here to sign in!</button>
-            <button id="no-account">No account? Click here to sign up!</button>
-          <div id="notes-div">
-            <div class="row">
-              <form class="col-6 box" id="post-note">
-                <h5>New Note</h5>
-                <input id="post-note-title" type="text" placeholder="title" name="note[title]">
-                <input id="post-note-body" type="text" placeholder="body" name="note[body]">
-                <button type="submit">s u b m i t</button>
-              </form>
-              <form class="col-6 box" id="update-note">
-                <h5>Update Note</h5>
-                <input required type="text" name="note[id]" placeholder="note id">
-                <input id="update-note-title" type="text" placeholder="title" name="note[title]">
-                <input id="update-note-body" type="text" placeholder="body" name="note[body]">
-                <button type="submit">s u b m i t</button>
-              </form>
-              </div>
-            <div class="row indiv-note">
-              <form class="col-6 box" id="show-note">
-                <h5>Find note</h5>
-                <input required type="text" placeholder="note id" name="note[id]">
-                <button type="submit">s u b m i t</button>
-              </form>
-              <form class="col-6 box" id="delete-note">
-                <h5>Delete note</h5>
-                <input required type="text" placeholder="note id" name="note[id]">
-                <button type="submit">s u b m i t</button>
-              </form>
             </div>
-            <form class="col-6 box" id="index-notes">
-            <button type="submit">Get all notes</button>
-            </form>
-            <div class="col-6 box" id="note-display"></div>
-        </div>
-        <div class="row">
-          <div class="show-change-password">
-            <form class="col-12 box" id="change-password">
-              <h5>Change password</h5>
-              <label for="old-password">Old password:</label>
-              <input id="old-password" type="password" placeholder="old password" name="passwords[old]">
-              <label for="new-password">New password:</label>
-              <input id="new-password" type="password" placeholder="new password" name="passwords[new]">
-              <button type="submit">s u b m i t</button>
-            </form>
           </div>
+          <div class="row">
+            <form class="col-12" id="sign-in">
+              <h3 class="auth-header">Sign In</h3>
+              <label for="email">Email</label>
+              <input class="input-style" id="sign-in-email" placeholder="note@lilypad.com" name="credentials[email]" type="email"><br>
+              <label for="password">Password</label>
+              <input class="input-style" id="sign-in-password" placeholder="password" name="credentials[password]" type="password"><br>
+              <button class="submit" type="submit">s u b m i t</button>
+            </form>
+              <button id="has-account">Already have an account? Click here to sign in!</button>
+              <button id="no-account">Don't have an account? Sign up for free!</button>
+          </div>
+        <div id="notes-div">
+            <div class="row">
+          <form class="col-6 box" id="post-note">
+  <button class="submit" id="post-note-submit" type="submit">+</button>
+  <p>    New Note</p>
+      <input class="input-style" id="post-note-title" type="text" placeholder="title" name="note[title]"><br>
+      <textarea class="input-style" id="post-note-body" type="text" placeholder="body" name="note[body]" rows=10 cols=30></textarea><br>
+          </form>
+          <form class="col-6 box" id="show-note">
+      <h5>Find note</h5>
+      <input class="input-style" required type="text" placeholder="note id" name="note[id]"><br>
+      <button class="submit" type="submit">s u b m i t</button>
+          </form>
+          <form class="col-6 box" id="update-note">
+  <h5>Update Note</h5>
+      <input class="input-style" required type="text" name="note[id]" placeholder="note id"><br>
+      <input class="input-style" id="update-note-title" type="text" placeholder="title" name="note[title]"><br>
+      <textarea class="input-style" id="update-note-body" type="text" placeholder="body" name="note[body]" rows=10 cols=30></textarea><br>
+      <button class="submit" type="submit">s u b m i t</button>
+          </form>
+                                                                          </div>
+            <div class="row indiv-note">
+          <form class="col-6 box" id="delete-note">
+      <h5>Delete note</h5>
+      <input class="input-style" required type="text" placeholder="note id" name="note[id]"><br>
+      <button class="submit" type="submit">s u b m i t</button>
+          </form>
+          <form class="col-6 box" id="index-notes">
+      <button class="submit" type="submit">Get all notes</button>
+          </form>
+                                                                          </div>
+          <div class="col-6 box" id="note-display"></div>
         </div>
-        </div>
-        </pre>
       </div>
-      <div class="footer">
-        <pre>
-          <p id="footer-line">Matt Puleri   |  November 2020  |  Lilypad ©</p>
         </pre>
+      <div class="footer">
+        <pre><p id="footer-line">Matt Puleri   |  November 2020  |  Lilypad ©</p></pre>
       </div>
     </body>
 </html>

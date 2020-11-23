@@ -92,6 +92,7 @@ const showSignIn = function (event) {
   $('#has-account').css('display', 'none')
   $('#no-account').css('display', 'block')
   $('#message').text('')
+  $('.goals').css('display', 'none')
 }
 const showSignUp = function (event) {
   $('#sign-in').css('display', 'none')
@@ -100,6 +101,10 @@ const showSignUp = function (event) {
   $('#has-account').css('display', 'block')
   $('#no-account').css('display', 'none')
   $('#message').text('')
+}
+const showChangePassword = function (event) {
+  $('#change-password').css('display', 'block')
+  $('#show-change-password').css('display', 'none')
 }
 
 module.exports = {
@@ -113,5 +118,6 @@ module.exports = {
   onDeleteNote,
   onIndexNotes,
   showSignIn,
-  showSignUp
+  showSignUp,
+  showChangePassword
 }

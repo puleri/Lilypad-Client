@@ -14,13 +14,14 @@ const onSignUpFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
 const onSignInSuccess = function (response) {
-  $('#message').text('You are now signed in ' + response.user.email)
+  $('#username-header').text(response.user.email)
+  $('#message').text('')
   $('#sign-in').trigger('reset')
   $('#notes-div').css('display', 'block')
   $('#sign-in').css('display', 'none')
   $('#sign-out').css('display', 'block')
   $('#no-account').css('display', 'none')
-  $('.show-change-password').css('display', 'block')
+  $('#show-change-password').css('display', 'block')
   store.user = response.user
 }
 const onSignInFailure = function (error) {
@@ -30,11 +31,14 @@ const onSignInFailure = function (error) {
 const onChangePasswordSuccess = function () {
   $('#message').text('You have successfully changed your password')
   $('#change-password').trigger('reset')
+  $('#show-change-password').css('display', 'block')
+  $('#change-password').css('display', 'none')
 }
 const onChangePasswordFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
 }
 const onSignOutSuccess = function () {
+  $('#username-header').text('')
   $('#message').text('You are now signed out!')
   $('.show-change-password').css('display', 'none')
   $('#sign-in').css('display', 'block')
@@ -46,6 +50,7 @@ const onSignOutSuccess = function () {
   $('#post-note').trigger('reset')
   $('#delete-note').trigger('reset')
   $('#change-password').trigger('reset')
+  $('#change-password').css('display', 'none')
 }
 const onSignOutFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
@@ -70,9 +75,10 @@ const onShowNoteSuccess = function (res) {
   $('#note-display').html('')
 
   const noteHTML = (`
+    <div class="box">
     <h6>${note.title}</h6>
     <p class="notes-table">${note.body}</p>
-    <br>
+    </div>
   `)
 
   $('#note-display').html(noteHTML)
@@ -92,13 +98,13 @@ const onIndexNotesSuccess = function (res) {
 
   $('#note-display').html('')
   notes.forEach(function (currentNote) {
-    const noteHTML = (`
+    const noteHTML =
+  (`<div class="box">
     <h6>${currentNote.title}</h6>
     <p>${currentNote.body}</p>
     <p>Owner: ${currentNote.owner.email}</p>
-    <p>ID: ${currentNote._id}
-    <br>
-    `)
+    <p>ID: ${currentNote._id}</p>
+    </div>`)
     $('#note-display').append(noteHTML)
   })
 }
