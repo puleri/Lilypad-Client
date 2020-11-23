@@ -50,7 +50,9 @@ As a user I want to delete notes so that I can clear irrelivant information.
 
 As a user I want to send my notes via email so I can view them on other devices.
 
-#### Links to API and API Repository
+#### Links
 Link to Deployed Lilypad-Express <https://guarded-inlet-43005.herokuapp.com/>
 <br>
 Link to Lilypad-Express repository <https://github.com/puleri/Lilypad-Express>
+<br>
+Link to Deployed Client <puleri.github.io/lilypad-client/>
