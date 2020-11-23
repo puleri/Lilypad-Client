@@ -55,4 +55,4 @@ Link to Deployed Lilypad-Express <https://guarded-inlet-43005.herokuapp.com/>
 <br>
 Link to Lilypad-Express repository <https://github.com/puleri/Lilypad-Express>
 <br>
-Link to Deployed Client <puleri.github.io/lilypad-client/>
+Link to Deployed Client <https://puleri.github.io/Lilypad-Client/>
