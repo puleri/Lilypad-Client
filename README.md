@@ -5,7 +5,7 @@ notes. The client side for the app is a single page application. Users are able 
 sign in, change-password, and sign out-- all of which in order to protect user information.
 
 ## Technologies used
-Technologies used include: Justinmind, Atom, Javascript, HTML, CSS, SCSS, and an external API (link 
+Technologies used include: Justinmind, Atom, Javascript, HTML, CSS, SCSS, and an external API (link
 located below). This project was done entirely on a Macbook Pro. Research for the project was done
 with peers, on W3, and on StackOverflow.
 
@@ -15,7 +15,7 @@ flowing smoothly. Token authentication was created in the first phase of the pro
 the notes resource. At this point with a minimum viable project came testing and fixing
 functionality of user-resource (notes) security. Finally came some basic styling and addition
 of show/hide functionality-- allowing users to see more relevant information on the screen.
-When creating the front end I A-B'd some example code I had created before, but ultimately 
+When creating the front end I A-B'd some example code I had created before, but ultimately
 hit a stride that amounted to a faster development process than previous projects.
 
 ## Future development
@@ -54,5 +54,6 @@ As a user I want to send my notes via email so I can view them on other devices.
 Link to Deployed Lilypad-Express <https://guarded-inlet-43005.herokuapp.com/>
 <br>
 Link to Lilypad-Express repository <https://github.com/puleri/Lilypad-Express>
+<<<<<<< HEAD
 <br>
 Link to Deployed Client <https://puleri.github.io/Lilypad-Client/>
