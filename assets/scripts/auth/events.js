@@ -101,6 +101,7 @@ const showSignUp = function (event) {
   $('#has-account').css('display', 'block')
   $('#no-account').css('display', 'none')
   $('#message').text('')
+  $('.goals').css('display', 'block')
 }
 const showChangePassword = function (event) {
   $('#change-password').css('display', 'block')

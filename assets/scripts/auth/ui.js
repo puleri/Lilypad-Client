@@ -9,6 +9,7 @@ const onSignUpSuccess = function (response) {
   $('#sign-up').css('display', 'none')
   $('#has-account').css('display', 'none')
   $('#no-account').css('display', 'block')
+  $('.goals').css('display', 'none')
 }
 const onSignUpFailure = function (error) {
   $('#message').text(error.responseJSON.name + ': ' + error.responseJSON.message)
@@ -22,6 +23,7 @@ const onSignInSuccess = function (response) {
   $('#sign-out').css('display', 'block')
   $('#no-account').css('display', 'none')
   $('#show-change-password').css('display', 'block')
+  $('.goals').css('display', 'none')
   store.user = response.user
 }
 const onSignInFailure = function (error) {
